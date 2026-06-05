@@ -376,6 +376,7 @@ do
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
       { '<leader>b', group = '[B]uffer Ops', mode = { 'n', 'v' } },
+      { '<leader>g', group = '[G]it Ops', mode = { 'n', 'v' } },
       { 'gr', group = 'LSP Actions', mode = { 'n' } },
     },
   }
