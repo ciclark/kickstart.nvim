@@ -375,6 +375,7 @@ do
       { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
+      { '<leader>b', group = '[B]uffer Ops', mode = { 'n', 'v' } },
       { 'gr', group = 'LSP Actions', mode = { 'n' } },
     },
   }
@@ -443,6 +444,10 @@ do
 
   -- ... and there is more!
   --  Check out: https://github.com/nvim-mini/mini.nvim
+  require('mini.bufremove').setup()
+  local bufremove = require 'mini.bufremove'
+  vim.keymap.set('n', '<leader>bd', bufremove.delete, { desc = 'Buffer [d]elete' } )
+  vim.keymap.set('n', '<leader>bD', function() bufremove.delete(nil, true) end, { desc = 'Buffer Force [D]elete' } )
 end
 
 -- ============================================================
