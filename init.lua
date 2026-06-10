@@ -696,6 +696,7 @@ do
   local servers = {
     clangd = {},
     -- gopls = {},
+    neocmake = {},
     pyright = {},
     -- rust_analyzer = {},
     --
